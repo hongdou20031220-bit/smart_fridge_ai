@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Fridge AI</title>
+</head>
+<body>
+  <h1>上传一张水果图片 🍎</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="识别">
+  </form>
+
+  {% if result %}
+    <h2>识别结果：</h2>
+    <ul>
+      {% for item in result %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
