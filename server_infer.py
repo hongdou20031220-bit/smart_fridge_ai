@@ -58,7 +58,11 @@ def save_record(fruit_name):
 # 3️⃣ 首页路由：测试服务器是否运行
 @app.route('/')
 def home():
-    return "Smart Fridge AI Server with Image Recognition is Running!"
+    return '''
+    <h1 style="font-family: Arial;">Welcome to Smart Fridge AI 🍎</h1>
+    <p>✅ Server is running successfully on Render!</p>
+    <p>➡️ Try the <a href="/upload">Upload Page</a> to test image recognition.</p>
+    '''
 
 # 4️⃣ 识别接口：接收图片并返回预测结果
 @app.route('/predict', methods=['POST'])
